@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand slide-in-1 text-white" id="brand" href="/"
+      ><strong>Hack the Blog</strong></a
+    >
+    <div>
+      <a href="/user/registro" class="btn btn-primary btn-sm" <%if (!user) {%>
+        style="display:inline" <%}else{%> style="display:none" <%}%> role="button">Register</a
+      >
+      <a href="/user/login" class="btn btn-primary btn-sm" <%if (!user) {%>
+        style="display:inline" <%}else{%> style="display:none" <%}%> role="button">Login</a
+      >
+      <a href="/admin" class="btn btn-primary btn-sm" <%if (!user) {%>
+        style="display:none" <%}else{%> style="display:inline" <%}%> role="button">Admin</a
+      >
+      <a href="/user/logout" <%if (!user) {%>
+        style="display:none" <%}else{%> style="display:inline" <%}%> class="btn btn-danger btn-sm"
+        role="button">Logout</a
+      >
+    </div>
+  </div>
+</nav>
